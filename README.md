@@ -1,14 +1,17 @@
 Overview
+
 This code defines a system for fetching a tech news article from a given URL, summarizing it using OpenAI's GPT-4 model, and then posting the summary to Slack. It leverages the Model Context Protocol (MCP) for interacting with external tools like a web browser (Puppeteer) and Slack.
 
 Code Explanation
 1. Imports and Setup
-# Import standard libs
+- Import standard libs
+
 import asyncio
 import json
 import os
 
-# Load config (contains OPENAI_API_KEY and SLACK_WEBHOOK_URL or token)
+- Load config (contains OPENAI_API_KEY and SLACK_WEBHOOK_URL or token)
+
 with open("config.json", "r") as f:
     config = json.load(f)
 
